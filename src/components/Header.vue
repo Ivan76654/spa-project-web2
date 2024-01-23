@@ -29,15 +29,19 @@ export default {
 
 <style>
 header.app-header {
+  min-height: 8vh;
   background-color: greenyellow;
   border: 1px solid black;
   box-shadow: 0px 1px 7px gray;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 h1.header-title {
+  text-wrap: nowrap;
   padding: 5px;
 }
 
@@ -67,6 +71,7 @@ ul.nav-links li.link-item:last-child {
 ul.nav-links li.link-item a {
   text-decoration: none;
   color: black;
+  font-size: 1.1rem;
 }
 
 ul.nav-links li.link-item a.router-link-exact-active {

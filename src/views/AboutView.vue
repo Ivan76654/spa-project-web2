@@ -36,6 +36,7 @@ main {
   margin-top: 15px;
   padding-left: 5px;
   padding-right: 5px;
+  overflow-y: auto;
 }
 
 h2 {
