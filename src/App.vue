@@ -1,20 +1,17 @@
 <script>
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterView } from 'vue-router';
+import Header from './components/Header.vue';
 
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Header
+  }
 };
 </script>
 
 <template>
-  <header>
-    <div>
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-      </nav>
-    </div>
-  </header>
-
+  <Header title="VueJS Blog App"></Header>
   <RouterView />
 </template>
 
