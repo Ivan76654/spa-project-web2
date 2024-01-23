@@ -14,13 +14,13 @@ export default {
     <nav class="nav-container">
       <ul class="nav-links">
         <li class="link-item">
-          <RouterLink to="/">Home</RouterLink>
+          <RouterLink :to="{ name: 'Home' }">Home</RouterLink>
         </li>
         <li class="link-item">
           <RouterLink to="/post">Post</RouterLink>
         </li>
         <li class="link-item">
-          <RouterLink to="/about">About</RouterLink>
+          <RouterLink :to="{ name: 'About' }">About</RouterLink>
         </li>
       </ul>
     </nav>
