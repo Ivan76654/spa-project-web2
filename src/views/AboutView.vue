@@ -32,7 +32,7 @@ export default {
 
 <style scoped>
 main {
-  height: 100;
+  flex: 1;
   margin-top: 15px;
   padding-left: 5px;
   padding-right: 5px;
