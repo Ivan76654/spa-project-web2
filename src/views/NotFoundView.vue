@@ -12,7 +12,9 @@ export default {
 <template>
   <main class="main-container">
     <h2>404 Not Found</h2>
-    <p>Path '/{{ $route.params.catchAll }}' does not exist. Please check if you entered correct URL.</p>
+    <p>
+      Path '/{{ $route.params.catchAll }}' does not exist. Please check if you entered correct URL.
+    </p>
     <RouterLink class="return-link" :to="{ name: 'Home' }">Home</RouterLink>
   </main>
 </template>

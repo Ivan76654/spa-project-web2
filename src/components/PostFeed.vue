@@ -10,10 +10,13 @@ export default {
     };
   },
   methods: {
-    ...mapActions(usePostStore, ['loadPosts'])
+    ...mapActions(usePostStore, ['loadPosts']),
+    navigateToPostById(id) {
+      this.$router.push({ path: `/post/${id}` });
+    }
   },
   computed: {
-    ...mapState(usePostStore, ['allPosts', 'allPostsFormatted'])
+    ...mapState(usePostStore, ['allPosts', 'allFilteredPostsFormatted'])
   },
   async mounted() {
     await this.loadPosts();
@@ -27,7 +30,12 @@ export default {
   <div class="container" v-else>
     <p class="info-paragraph" v-if="!allPosts.length">No posts to display.</p>
     <div class="feed-container" v-else>
-      <div class="post-preview" v-for="post in allPostsFormatted" :key="post.id">
+      <div
+        class="post-preview"
+        v-for="post in allFilteredPostsFormatted"
+        :key="post.id"
+        @click="navigateToPostById(post.id)"
+      >
         <h2 class="post-title">{{ post.postTitle }}</h2>
         <p class="posted-on">Posted on: {{ post.postedOn }}</p>
         <p class="post-body">{{ post.postBody }}</p>
