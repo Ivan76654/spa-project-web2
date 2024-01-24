@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <main>
+  <main class="main-container">
     <h2>About</h2>
     <p>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus quas et itaque
@@ -31,7 +31,7 @@ export default {
 </template>
 
 <style scoped>
-main {
+main.main-container {
   flex: 1;
   margin-top: 15px;
   padding-left: 5px;
@@ -41,6 +41,7 @@ main {
 
 h2 {
   margin-bottom: 10px;
+  text-align: center;
 }
 
 p {
