@@ -44,6 +44,31 @@ export const usePostStore = defineStore('posts', {
           post.postTitle.toLowerCase().includes(lowerCaseSearch) ||
           post.postBody.toLowerCase().includes(lowerCaseSearch)
       );
+    },
+    async insertNewPost(postTitle, postBody) {
+      try {
+        const timestamp = new Date(Date.now());
+        let newId = Math.round(Math.random() * 10000000);
+
+        const body = {
+          id: newId,
+          postedOn: timestamp,
+          postTitle: postTitle,
+          postBody: postBody
+        };
+
+        const response = await fetch('http://localhost:3000/posts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(body)
+        });
+
+        if (response.ok) return newId;
+      } catch (err) {
+        console.log(err.message);
+      }
     }
   }
 });

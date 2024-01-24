@@ -12,8 +12,8 @@ export default {
 </script>
 
 <template>
+  <SearchPosts></SearchPosts>
   <main class="main-container">
-    <SearchPosts></SearchPosts>
     <PostFeed></PostFeed>
   </main>
 </template>

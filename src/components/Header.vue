@@ -17,7 +17,7 @@ export default {
           <RouterLink :to="{ name: 'Home' }">Home</RouterLink>
         </li>
         <li class="link-item">
-          <RouterLink to="/post">Post</RouterLink>
+          <RouterLink :to="{ name: 'NewPost' }">Post</RouterLink>
         </li>
         <li class="link-item">
           <RouterLink :to="{ name: 'About' }">About</RouterLink>
